@@ -1,0 +1,260 @@
+[debug] [2024-05-26T21:30:31.449Z] ----------------------------------------------------------------------
+[debug] [2024-05-26T21:30:31.452Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Santi\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting --debug
+[debug] [2024-05-26T21:30:31.453Z] CLI Version:   13.10.0
+[debug] [2024-05-26T21:30:31.453Z] Platform:      win32
+[debug] [2024-05-26T21:30:31.453Z] Node Version:  v20.12.2
+[debug] [2024-05-26T21:30:31.453Z] Time:          Sun May 26 2024 18:30:31 GMT-0300 (hora estándar de Argentina)
+[debug] [2024-05-26T21:30:31.453Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-26T21:30:31.544Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-26T21:30:31.546Z] > authorizing via signed-in user (santigrosso107@gmail.com)
+[debug] [2024-05-26T21:30:31.551Z] [iam] checking project simulacrolaboiv-51b41 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-26T21:30:31.555Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions [none]
+[debug] [2024-05-26T21:30:31.555Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions x-goog-quota-user=projects/simulacrolaboiv-51b41
+[debug] [2024-05-26T21:30:31.556Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-26T21:30:32.526Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions 200
+[debug] [2024-05-26T21:30:32.527Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-26T21:30:32.528Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/simulacrolaboiv-51b41 [none]
+[debug] [2024-05-26T21:30:32.964Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/simulacrolaboiv-51b41 200
+[debug] [2024-05-26T21:30:32.964Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/simulacrolaboiv-51b41 {"projectId":"simulacrolaboiv-51b41","projectNumber":"462774097720","displayName":"simulacrolaboIV","name":"projects/simulacrolaboiv-51b41","resources":{"hostingSite":"simulacrolaboiv-51b41"},"state":"ACTIVE","etag":"1_7aced83a-06a5-4add-8bac-a623d16677ba"}
+[info] 
+[info] === Deploying to 'simulacrolaboiv-51b41'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-05-26T21:30:32.969Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacrolaboiv-51b41/versions [none]
+[debug] [2024-05-26T21:30:32.969Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacrolaboiv-51b41/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-05-26T21:30:34.764Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacrolaboiv-51b41/versions 200
+[debug] [2024-05-26T21:30:34.765Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacrolaboiv-51b41/versions {"name":"projects/462774097720/sites/simulacrolaboiv-51b41/versions/a8e0b97c1870ffcd","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[simulacrolaboiv-51b41]: beginning deploy... 
+[info] i  hosting[simulacrolaboiv-51b41]: found 5 files in y 
+[debug] [2024-05-26T21:30:34.773Z] [hosting] uploading with 200 concurrency
+[debug] [2024-05-26T21:30:34.777Z] [hosting] hash cache [eQ] stored for 5 files
+[debug] [2024-05-26T21:30:34.778Z] [hosting][hash queue][FINAL] {"max":1,"min":1,"avg":1,"active":0,"complete":5,"success":5,"errored":0,"retried":0,"total":5,"elapsed":4}
+[debug] [2024-05-26T21:30:34.778Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/462774097720/sites/simulacrolaboiv-51b41/versions/a8e0b97c1870ffcd:populateFiles [none]
+[debug] [2024-05-26T21:30:34.779Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/462774097720/sites/simulacrolaboiv-51b41/versions/a8e0b97c1870ffcd:populateFiles {"files":{"/favicon.ico":"a905b13e228420df3dbe746dfb656d37a49736494c0737d00e007c8dc7319912","/index.html":"c4491ebe5fc9e1e2706458bbd26d50787d09c88183d91c29dd1fd31ed0bac724","/main-YVF7JYDI.js":"2e0a0ecd44767484fe46b5225479b9063292c87abb1c8b04025c62148e78ac7e","/polyfills-A7MJM4D4.js":"7756b8b41c82a0a87e6caf58b0a6230718270d00dbe0be49235c47528e7fd4a2","/styles-5INURTSO.css":"46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e"}}
+[debug] [2024-05-26T21:30:35.256Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/462774097720/sites/simulacrolaboiv-51b41/versions/a8e0b97c1870ffcd:populateFiles 200
+[debug] [2024-05-26T21:30:35.256Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/462774097720/sites/simulacrolaboiv-51b41/versions/a8e0b97c1870ffcd:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/simulacrolaboiv-51b41/versions/a8e0b97c1870ffcd/files"}
+[debug] [2024-05-26T21:30:35.257Z] [hosting][populate queue][FINAL] {"max":481,"min":481,"avg":481,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":481}
+[debug] [2024-05-26T21:30:35.257Z] [hosting] uploads queued: 0
+[debug] [2024-05-26T21:30:35.257Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1716759035257}
+[info] i  hosting: upload complete 
+[info] +  hosting[simulacrolaboiv-51b41]: file upload complete 
+[debug] [2024-05-26T21:30:35.258Z] [hosting] deploy completed after 491ms
+[debug] [2024-05-26T21:30:35.258Z] [
+  {
+    "config": {
+      "public": "y",
+      "ignore": [
+        "firebase.json",
+        "/.*",
+        "/node_modules/"
+      ],
+      "rewrites": [
+        {
+          "source": "",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "simulacrolaboiv-51b41"
+    },
+    "version": "projects/462774097720/sites/simulacrolaboiv-51b41/versions/a8e0b97c1870ffcd"
+  }
+]
+[info] i  hosting[simulacrolaboiv-51b41]: finalizing version... 
+[error] 
+[error] Error: Cannot specify a rewrite with no pattern (either a glob or regex required).
+[debug] [2024-05-26T21:32:24.819Z] ----------------------------------------------------------------------
+[debug] [2024-05-26T21:32:24.822Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Santi\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting --debug
+[debug] [2024-05-26T21:32:24.822Z] CLI Version:   13.10.0
+[debug] [2024-05-26T21:32:24.822Z] Platform:      win32
+[debug] [2024-05-26T21:32:24.822Z] Node Version:  v20.12.2
+[debug] [2024-05-26T21:32:24.823Z] Time:          Sun May 26 2024 18:32:24 GMT-0300 (hora estándar de Argentina)
+[debug] [2024-05-26T21:32:24.823Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-26T21:32:24.912Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-26T21:32:24.914Z] > authorizing via signed-in user (santigrosso107@gmail.com)
+[debug] [2024-05-26T21:32:24.919Z] [iam] checking project simulacrolaboiv-51b41 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-26T21:32:24.922Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions [none]
+[debug] [2024-05-26T21:32:24.923Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions x-goog-quota-user=projects/simulacrolaboiv-51b41
+[debug] [2024-05-26T21:32:24.924Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-26T21:32:25.895Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions 200
+[debug] [2024-05-26T21:32:25.895Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-26T21:32:25.897Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/simulacrolaboiv-51b41 [none]
+[debug] [2024-05-26T21:32:26.376Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/simulacrolaboiv-51b41 200
+[debug] [2024-05-26T21:32:26.376Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/simulacrolaboiv-51b41 {"projectId":"simulacrolaboiv-51b41","projectNumber":"462774097720","displayName":"simulacrolaboIV","name":"projects/simulacrolaboiv-51b41","resources":{"hostingSite":"simulacrolaboiv-51b41"},"state":"ACTIVE","etag":"1_7aced83a-06a5-4add-8bac-a623d16677ba"}
+[info] 
+[info] === Deploying to 'simulacrolaboiv-51b41'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-05-26T21:32:26.381Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacrolaboiv-51b41/versions [none]
+[debug] [2024-05-26T21:32:26.381Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacrolaboiv-51b41/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-05-26T21:32:28.297Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacrolaboiv-51b41/versions 200
+[debug] [2024-05-26T21:32:28.297Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacrolaboiv-51b41/versions {"name":"projects/462774097720/sites/simulacrolaboiv-51b41/versions/ca242a0b6940b08f","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[simulacrolaboiv-51b41]: beginning deploy... 
+[info] i  hosting[simulacrolaboiv-51b41]: found 5 files in y 
+[debug] [2024-05-26T21:32:28.305Z] [hosting] uploading with 200 concurrency
+[debug] [2024-05-26T21:32:28.309Z] [hosting] hash cache [eQ] stored for 5 files
+[debug] [2024-05-26T21:32:28.310Z] [hosting][hash queue][FINAL] {"max":1,"min":0,"avg":0,"active":0,"complete":5,"success":5,"errored":0,"retried":0,"total":5,"elapsed":3}
+[debug] [2024-05-26T21:32:28.311Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/462774097720/sites/simulacrolaboiv-51b41/versions/ca242a0b6940b08f:populateFiles [none]
+[debug] [2024-05-26T21:32:28.311Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/462774097720/sites/simulacrolaboiv-51b41/versions/ca242a0b6940b08f:populateFiles {"files":{"/favicon.ico":"a905b13e228420df3dbe746dfb656d37a49736494c0737d00e007c8dc7319912","/index.html":"c4491ebe5fc9e1e2706458bbd26d50787d09c88183d91c29dd1fd31ed0bac724","/main-YVF7JYDI.js":"2e0a0ecd44767484fe46b5225479b9063292c87abb1c8b04025c62148e78ac7e","/polyfills-A7MJM4D4.js":"7756b8b41c82a0a87e6caf58b0a6230718270d00dbe0be49235c47528e7fd4a2","/styles-5INURTSO.css":"46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e"}}
+[debug] [2024-05-26T21:32:28.766Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/462774097720/sites/simulacrolaboiv-51b41/versions/ca242a0b6940b08f:populateFiles 200
+[debug] [2024-05-26T21:32:28.766Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/462774097720/sites/simulacrolaboiv-51b41/versions/ca242a0b6940b08f:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/simulacrolaboiv-51b41/versions/ca242a0b6940b08f/files"}
+[debug] [2024-05-26T21:32:28.767Z] [hosting][populate queue][FINAL] {"max":459,"min":459,"avg":459,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":459}
+[debug] [2024-05-26T21:32:28.767Z] [hosting] uploads queued: 0
+[debug] [2024-05-26T21:32:28.767Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1716759148767}
+[info] i  hosting: upload complete 
+[info] +  hosting[simulacrolaboiv-51b41]: file upload complete 
+[debug] [2024-05-26T21:32:28.768Z] [hosting] deploy completed after 469ms
+[debug] [2024-05-26T21:32:28.769Z] [
+  {
+    "config": {
+      "public": "y",
+      "ignore": [
+        "firebase.json",
+        "/.*",
+        "/node_modules/"
+      ],
+      "rewrites": [
+        {
+          "source": "",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "simulacrolaboiv-51b41"
+    },
+    "version": "projects/462774097720/sites/simulacrolaboiv-51b41/versions/ca242a0b6940b08f"
+  }
+]
+[info] i  hosting[simulacrolaboiv-51b41]: finalizing version... 
+[error] 
+[error] Error: Cannot specify a rewrite with no pattern (either a glob or regex required).
+[debug] [2024-05-26T21:32:58.393Z] ----------------------------------------------------------------------
+[debug] [2024-05-26T21:32:58.396Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Santi\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting --debug
+[debug] [2024-05-26T21:32:58.396Z] CLI Version:   13.10.0
+[debug] [2024-05-26T21:32:58.396Z] Platform:      win32
+[debug] [2024-05-26T21:32:58.397Z] Node Version:  v20.12.2
+[debug] [2024-05-26T21:32:58.397Z] Time:          Sun May 26 2024 18:32:58 GMT-0300 (hora estándar de Argentina)
+[debug] [2024-05-26T21:32:58.397Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-26T21:32:58.483Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-26T21:32:58.485Z] > authorizing via signed-in user (santigrosso107@gmail.com)
+[debug] [2024-05-26T21:32:58.485Z] [iam] checking project simulacrolaboiv-51b41 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-26T21:32:58.488Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions [none]
+[debug] [2024-05-26T21:32:58.488Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions x-goog-quota-user=projects/simulacrolaboiv-51b41
+[debug] [2024-05-26T21:32:58.489Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-26T21:32:59.452Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions 200
+[debug] [2024-05-26T21:32:59.452Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-26T21:32:59.453Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/simulacrolaboiv-51b41 [none]
+[debug] [2024-05-26T21:32:59.909Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/simulacrolaboiv-51b41 200
+[debug] [2024-05-26T21:32:59.909Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/simulacrolaboiv-51b41 {"projectId":"simulacrolaboiv-51b41","projectNumber":"462774097720","displayName":"simulacrolaboIV","name":"projects/simulacrolaboiv-51b41","resources":{"hostingSite":"simulacrolaboiv-51b41"},"state":"ACTIVE","etag":"1_7aced83a-06a5-4add-8bac-a623d16677ba"}
+[info] 
+[info] === Deploying to 'simulacrolaboiv-51b41'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-05-26T21:32:59.914Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacrolaboiv-51b41/versions [none]
+[debug] [2024-05-26T21:32:59.914Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacrolaboiv-51b41/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-05-26T21:33:01.858Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacrolaboiv-51b41/versions 200
+[debug] [2024-05-26T21:33:01.858Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacrolaboiv-51b41/versions {"name":"projects/462774097720/sites/simulacrolaboiv-51b41/versions/7d2b20d17b5ec71e","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[simulacrolaboiv-51b41]: beginning deploy... 
+[info] i  hosting[simulacrolaboiv-51b41]: found 5 files in y 
+[debug] [2024-05-26T21:33:01.866Z] [hosting] uploading with 200 concurrency
+[debug] [2024-05-26T21:33:01.870Z] [hosting] hash cache [eQ] stored for 5 files
+[debug] [2024-05-26T21:33:01.870Z] [hosting][hash queue][FINAL] {"max":1,"min":0,"avg":0,"active":0,"complete":5,"success":5,"errored":0,"retried":0,"total":5,"elapsed":3}
+[debug] [2024-05-26T21:33:01.870Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/462774097720/sites/simulacrolaboiv-51b41/versions/7d2b20d17b5ec71e:populateFiles [none]
+[debug] [2024-05-26T21:33:01.871Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/462774097720/sites/simulacrolaboiv-51b41/versions/7d2b20d17b5ec71e:populateFiles {"files":{"/favicon.ico":"a905b13e228420df3dbe746dfb656d37a49736494c0737d00e007c8dc7319912","/index.html":"c4491ebe5fc9e1e2706458bbd26d50787d09c88183d91c29dd1fd31ed0bac724","/main-YVF7JYDI.js":"2e0a0ecd44767484fe46b5225479b9063292c87abb1c8b04025c62148e78ac7e","/polyfills-A7MJM4D4.js":"7756b8b41c82a0a87e6caf58b0a6230718270d00dbe0be49235c47528e7fd4a2","/styles-5INURTSO.css":"46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e"}}
+[debug] [2024-05-26T21:33:02.372Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/462774097720/sites/simulacrolaboiv-51b41/versions/7d2b20d17b5ec71e:populateFiles 200
+[debug] [2024-05-26T21:33:02.372Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/462774097720/sites/simulacrolaboiv-51b41/versions/7d2b20d17b5ec71e:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/simulacrolaboiv-51b41/versions/7d2b20d17b5ec71e/files"}
+[debug] [2024-05-26T21:33:02.373Z] [hosting][populate queue][FINAL] {"max":505,"min":505,"avg":505,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":505}
+[debug] [2024-05-26T21:33:02.373Z] [hosting] uploads queued: 0
+[debug] [2024-05-26T21:33:02.373Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1716759182373}
+[info] i  hosting: upload complete 
+[info] +  hosting[simulacrolaboiv-51b41]: file upload complete 
+[debug] [2024-05-26T21:33:02.374Z] [hosting] deploy completed after 514ms
+[debug] [2024-05-26T21:33:02.374Z] [
+  {
+    "config": {
+      "public": "y",
+      "ignore": [
+        "firebase.json",
+        "/.*",
+        "/node_modules/"
+      ],
+      "rewrites": [
+        {
+          "source": "",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "simulacrolaboiv-51b41"
+    },
+    "version": "projects/462774097720/sites/simulacrolaboiv-51b41/versions/7d2b20d17b5ec71e"
+  }
+]
+[info] i  hosting[simulacrolaboiv-51b41]: finalizing version... 
+[error] 
+[error] Error: Cannot specify a rewrite with no pattern (either a glob or regex required).
+[debug] [2024-05-26T21:34:09.298Z] ----------------------------------------------------------------------
+[debug] [2024-05-26T21:34:09.301Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Santi\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting --debug
+[debug] [2024-05-26T21:34:09.302Z] CLI Version:   13.10.0
+[debug] [2024-05-26T21:34:09.302Z] Platform:      win32
+[debug] [2024-05-26T21:34:09.302Z] Node Version:  v20.12.2
+[debug] [2024-05-26T21:34:09.302Z] Time:          Sun May 26 2024 18:34:09 GMT-0300 (hora estándar de Argentina)
+[debug] [2024-05-26T21:34:09.302Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-26T21:34:09.391Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-26T21:34:09.393Z] > authorizing via signed-in user (santigrosso107@gmail.com)
+[debug] [2024-05-26T21:34:09.394Z] [iam] checking project simulacrolaboiv-51b41 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-26T21:34:09.397Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions [none]
+[debug] [2024-05-26T21:34:09.397Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions x-goog-quota-user=projects/simulacrolaboiv-51b41
+[debug] [2024-05-26T21:34:09.398Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-26T21:34:10.688Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions 200
+[debug] [2024-05-26T21:34:10.688Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/simulacrolaboiv-51b41:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-26T21:34:10.690Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/simulacrolaboiv-51b41 [none]
+[debug] [2024-05-26T21:34:11.308Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/simulacrolaboiv-51b41 200
+[debug] [2024-05-26T21:34:11.308Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/simulacrolaboiv-51b41 {"projectId":"simulacrolaboiv-51b41","projectNumber":"462774097720","displayName":"simulacrolaboIV","name":"projects/simulacrolaboiv-51b41","resources":{"hostingSite":"simulacrolaboiv-51b41"},"state":"ACTIVE","etag":"1_7aced83a-06a5-4add-8bac-a623d16677ba"}
+[info] 
+[info] === Deploying to 'simulacrolaboiv-51b41'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-05-26T21:34:11.314Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacrolaboiv-51b41/versions [none]
+[debug] [2024-05-26T21:34:11.314Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacrolaboiv-51b41/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-05-26T21:34:12.857Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacrolaboiv-51b41/versions 200
+[debug] [2024-05-26T21:34:12.857Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/simulacrolaboiv-51b41/versions {"name":"projects/462774097720/sites/simulacrolaboiv-51b41/versions/c73f93108f4f3b6d","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[simulacrolaboiv-51b41]: beginning deploy... 
+[info] i  hosting[simulacrolaboiv-51b41]: found 5 files in y 
+[debug] [2024-05-26T21:34:12.865Z] [hosting] uploading with 200 concurrency
+[debug] [2024-05-26T21:34:12.869Z] [hosting] hash cache [eQ] stored for 5 files
+[debug] [2024-05-26T21:34:12.870Z] [hosting][hash queue][FINAL] {"max":1,"min":0,"avg":0,"active":0,"complete":5,"success":5,"errored":0,"retried":0,"total":5,"elapsed":3}
+[debug] [2024-05-26T21:34:12.871Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/462774097720/sites/simulacrolaboiv-51b41/versions/c73f93108f4f3b6d:populateFiles [none]
+[debug] [2024-05-26T21:34:12.871Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/462774097720/sites/simulacrolaboiv-51b41/versions/c73f93108f4f3b6d:populateFiles {"files":{"/favicon.ico":"a905b13e228420df3dbe746dfb656d37a49736494c0737d00e007c8dc7319912","/index.html":"c4491ebe5fc9e1e2706458bbd26d50787d09c88183d91c29dd1fd31ed0bac724","/main-YVF7JYDI.js":"2e0a0ecd44767484fe46b5225479b9063292c87abb1c8b04025c62148e78ac7e","/polyfills-A7MJM4D4.js":"7756b8b41c82a0a87e6caf58b0a6230718270d00dbe0be49235c47528e7fd4a2","/styles-5INURTSO.css":"46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e"}}
+[debug] [2024-05-26T21:34:13.132Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/462774097720/sites/simulacrolaboiv-51b41/versions/c73f93108f4f3b6d:populateFiles 200
+[debug] [2024-05-26T21:34:13.133Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/462774097720/sites/simulacrolaboiv-51b41/versions/c73f93108f4f3b6d:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/simulacrolaboiv-51b41/versions/c73f93108f4f3b6d/files"}
+[debug] [2024-05-26T21:34:13.133Z] [hosting][populate queue][FINAL] {"max":265,"min":265,"avg":265,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":265}
+[debug] [2024-05-26T21:34:13.134Z] [hosting] uploads queued: 0
+[debug] [2024-05-26T21:34:13.134Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1716759253134}
+[info] i  hosting: upload complete 
+[info] +  hosting[simulacrolaboiv-51b41]: file upload complete 
+[debug] [2024-05-26T21:34:13.135Z] [hosting] deploy completed after 276ms
+[debug] [2024-05-26T21:34:13.135Z] [
+  {
+    "config": {
+      "public": "y",
+      "ignore": [
+        "firebase.json",
+        "/.*",
+        "/node_modules/"
+      ],
+      "rewrites": [
+        {
+          "source": "",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "simulacrolaboiv-51b41"
+    },
+    "version": "projects/462774097720/sites/simulacrolaboiv-51b41/versions/c73f93108f4f3b6d"
+  }
+]
+[info] i  hosting[simulacrolaboiv-51b41]: finalizing version... 
+[error] 
+[error] Error: Cannot specify a rewrite with no pattern (either a glob or regex required).
